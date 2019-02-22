@@ -8,7 +8,7 @@
  */
 import React, {Component} from 'react';
 import {StyleSheet, View} from 'react-native';
-import StepperTouch from './stepper';
+import StepperTouch from 'react-native-stepper-touch';
 export default class App extends Component{
   state={
     value:0,

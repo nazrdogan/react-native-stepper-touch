@@ -12,21 +12,17 @@ export default class StepperTouch extends React.Component {
         this.state.panResponder = PanResponder.create({
             onStartShouldSetPanResponder: () => true,
             onPanResponderMove: (e, gestureState) =>
-                Math.abs(gestureState.dx) > this.props.radius - this.props.radius / 6
+                Math.abs(gestureState.dx) > this.props.radius
                     ? null
                     : Animated.event([null, { dx: this.state.pan.x }])(e, gestureState),
 
             onPanResponderRelease: (e, { vx, dx }) => {
-                // Here, abs(vx) is the current speed (not velocity) of the gesture,
-                // and abs(dx) is the distance traveled (not displacement)
                 console.log(vx, dx);
                 if (dx > this.props.radius) {
-                    //this.setState({ count: this.state.count + 1 });
-                    this.props.onValueChange('plus');
+                    this.props.onValueChange(true);
                 }
                 if (dx < -this.props.radius) {
-                    // this.setState({ count: this.state.count - 1 });
-                    this.props.onValueChange('minus');
+                    this.props.onValueChange(false);
                 }
                 Animated.spring(this.state.pan, {
                     toValue: 0,
@@ -90,19 +86,16 @@ export default class StepperTouch extends React.Component {
     render() {
         return <View
             pointerEvents={this.props.disabled  === true ? "none": "auto"}
+            overflow={"hidden"}
             style={this.getContainerViewStyle()}>
             <View
                 style={this.getInnerContainerView()}>
-
                 <Text style={this.getSignTextStyle()}>
                     -
                 </Text>
-
-
                 <Text style={this.getSignTextStyle()}>
                     +
                 </Text>
-
             </View>
             <Animated.View
                 {...this.state.panResponder.panHandlers}
@@ -111,7 +104,7 @@ export default class StepperTouch extends React.Component {
                     {this.props.value}
                 </Text>
             </Animated.View>
+
         </View>;
     }
 }
-
