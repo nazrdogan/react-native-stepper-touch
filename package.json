@@ -1,8 +1,12 @@
 {
   "name": "react-native-stepper-touch",
-  "version": "0.0.3",
+  "version": "0.0.4",
   "description": "",
   "main": "index.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/nazrdogan/react-native-stepper-touch.git"
+  },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
