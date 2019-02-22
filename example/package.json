@@ -4,12 +4,13 @@
   "private": true,
   "scripts": {
     "start": "node node_modules/react-native/local-cli/cli.js start",
+    "newclear": "rm -rf $TMPDIR/react-* && watchman watch-del-all && rm -rf ios/build && rm -rf node_modules/ && npm cache clean --force && npm i",
     "test": "jest"
   },
   "dependencies": {
     "react": "16.6.3",
     "react-native": "0.58.5",
-    "react-native-stepper-touch": "*"
+    "react-native-stepper-touch": "^0.0.3"
   },
   "devDependencies": {
     "babel-core": "^7.0.0-bridge.0",

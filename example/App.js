@@ -8,7 +8,7 @@
  */
 import React, {Component} from 'react';
 import {StyleSheet, View} from 'react-native';
-import StepperTouch from 'react-native-stepper-touch';
+import StepperTouch from './stepper';
 export default class App extends Component{
   state={
     value:0,
@@ -24,11 +24,12 @@ export default class App extends Component{
               circleTextStyle={{color:"#FF5722"}}
               innerContainerStyle={{paddingHorizontal:4}}
               radius={35}
-              onValueChange={positive =>
+              onValueChange={sign =>
+              {
                   this.setState({
-                      value: positive === false ? this.state.value - 1 : this.state.value + 1,
+                      value: sign === false ? this.state.value - 1 : this.state.value + 1,
                   })
-              }
+              }}
           />
       </View>
     );
