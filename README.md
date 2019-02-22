@@ -29,7 +29,8 @@ export default class App extends Component{
   }
 }
 ```
-!(image)[http://www.giphy.com/gifs/kspgLViBx5NSlDK1eY.gif]
+![Alt Text](https://github.com/nazrdogan/react-native-stepper-touch/blob/master/example/Feb-23-2019%2000-16-49.gif?raw=true)
+
 
       
  
