@@ -1,5 +1,8 @@
 # react-native-stepper-touch
 
+
+![Alt Text](https://github.com/nazrdogan/react-native-stepper-touch/blob/master/example/Feb-23-2019%2000-16-49.gif?raw=true)
+
 ### Usage
 
 ```javascript
@@ -29,8 +32,6 @@ export default class App extends Component{
   }
 }
 ```
-![Alt Text](https://github.com/nazrdogan/react-native-stepper-touch/blob/master/example/Feb-23-2019%2000-16-49.gif?raw=true)
-
 
       
  
