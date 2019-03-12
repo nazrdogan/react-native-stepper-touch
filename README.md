@@ -33,5 +33,8 @@ export default class App extends Component{
 }
 ```
 
+### Try on Snack 
+https://snack.expo.io/@nazrdogan/steppertouch
+
       
  
